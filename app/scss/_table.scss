@@ -1,0 +1,28 @@
+.container-tab {
+  margin: 10px;
+}
+
+table {
+  margin: 10px 0;
+  border-spacing: 0;
+  background-color: $bg;
+  width: 100%;
+}
+
+td,
+th {
+  height: 35px;
+  padding: 5px;
+  border: 1px solid black;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+th {
+  font-weight: 700;
+}
+
+td:last-of-type {
+  width: 90px;
+  text-align: center;
+}

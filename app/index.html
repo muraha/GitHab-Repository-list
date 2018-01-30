@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test-Task</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="container-tab">
+    Get data from GitHub:
+    <button class="local-storage">GET</button>
+    <table class="list" style="display: none;">
+      <thead>
+        <tr>
+          <th colspan="5">GitHub Repository List</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Created at</th>
+          <th>URL</th>
+          <th>Description</th>
+          <th><button class="add"> Add new </button></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- form action="" method="post" action="some_page.php" -->
+  <form class="new-rep" style="display: none;">
+    <fieldset>
+      <legend>Cerate New GitHub repository:&ThinSpace;</legend>
+      <div>
+        <div class="input-block">
+          Repository Name:
+          <input type="text" name="name" id="new-form-name">
+        </div>
+        <div class="input-block">
+          Description:
+          <input type="text" name="description" id="new-form-desc">
+        </div>
+        <button type="button" class="submit">Create</button>
+        <button type="button" class="reset">Cancel</button>
+      </div>
+    </fieldset>
+  </form>
+  <div class="upd-rep upd-form-container" style="display: none;">
+    <form class="upd-form-item">
+      <fieldset>
+        <legend>Edit GitHub repository:&ThinSpace;</legend>
+        <div>
+          <div class="input-block">
+            Repository Name:
+            <input type="text" name="name" id="upd-form-name">
+          </div>
+          <div class="input-block">
+            Description:
+            <input type="text" name="description" id="upd-form-desc">
+          </div>
+          <div class="input-block">
+            Created at:
+            <input type="datetime-local" name="name" id="upd-form-date">
+          </div>
+          <button type="button" class="submit">Save</button>
+          <button type="button" class="reset">Cancel</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+
+</html>
