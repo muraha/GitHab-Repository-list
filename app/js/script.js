@@ -11,9 +11,9 @@ $(document).ready(function() {
   $('.local-storage').click(function() {
     $.ajax({
       url: 'https://api.github.com/users/muraha/repos',
-      headers: {
-        "Authorization": localStorage.getItem('f3b8dd0d5ca3917ac4dbad2ced5389453ae2ea82')
-      },
+      /*headers: {
+        "Authorization": localStorage.getItem('')
+      },*/
       dataType: 'json',
       type: 'GET',
       success: function(json) {
