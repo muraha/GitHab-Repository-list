@@ -11,9 +11,9 @@ $(document).ready(function() {
   $('.local-storage').click(function() {
     $.ajax({
       url: 'https://api.github.com/users/muraha/repos',
-      /*headers: {
-        "Authorization": localStorage.getItem('')
-      },*/
+      headers: {
+        /*        "Authorization": localStorage.getItem('f3b8dd0d5ca3917ac4dbad2ced5389453ae2ea82')
+    */},
       dataType: 'json',
       type: 'GET',
       success: function(json) {
@@ -68,9 +68,13 @@ $(document).ready(function() {
   let formNew = $('.new-rep');
   let newCancel = $('.new-rep .reset');
   let newSubmit = $('.new-rep .submit');
+  let nameA = $('#new-form-name')
+  let descA = $('#new-form-desc')
 
-  btnNew.click(function() {
+  btnNew.click(function () {
+    nameA.removeClass('warning');
     formNew.toggle();
+    nameA.focus();
   });
 
   newCancel.click(function() {
@@ -78,9 +82,7 @@ $(document).ready(function() {
   });
 
   newSubmit.click(function() {
-    let nameA = $('#new-form-name')
-    let descA = $('#new-form-desc')
-    if (!nameA[0].value) {
+      if (!nameA[0].value) {
       nameA.addClass('warning');
       alert('Please insert Repository Name');
     } else {
@@ -118,8 +120,10 @@ $(document).ready(function() {
   let descU = $('#upd-form-desc');
   let dateU = $('#upd-form-date');
 
-  tbl.on('click', '.edit', function() {
+  tbl.on('click', '.edit', function () {
+    nameU.removeClass('warning');
     formUpd.show();
+    nameU.focus();
     id = $(this)[0].parentNode.id;
     let myStorage = JSON.parse(localStorage.getItem('data'));
     for (i = 0; i < myStorage.length; i++) {
